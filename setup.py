@@ -11,8 +11,7 @@ setup(
     description='A Python application for live camera overlay with hand and pose detection.',
     author='HUFLIT Tinh Hoa',
     author_email='hieunghiwork123@gmail.com',
-    url='https://github.com/ihatesea69/HumanWaveDetector',  # Replace with your GitHub repo link
-    classifiers=[
+    url='https://github.com/ihatesea69/HumanWaveDetector',  
         'Programming Language :: Python :: 3',
         'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',

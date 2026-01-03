@@ -1,57 +1,88 @@
 # HumanWaveDetector
 
-Dự án này là một ứng dụng camera trực tiếp sử dụng Mediapipe để phát hiện tay và tư thế, và in ra "Hello World" khi một người vẫy tay.
-Day la mot phan trong du an khac*
+<video src="https://github.com/user-attachments/assets/d7868488-5968-4b2c-b7df-4da830d4f4d2" controls autoplay muted loop></video>
 
-## Tính năng
-- Phát hiện tay và tư thế với Mediapipe.
-- Hiển thị luồng camera với lớp phủ cho tay và tư thế được phát hiện.
-- In ra "Hello World" khi phát hiện người đang vẫy tay.
+A real-time computer vision application using MediaPipe and OpenCV to detect human hand gestures and body pose. Displays "Hello" greeting when a waving hand gesture is recognized through the webcam.
 
-## Yêu cầu
+## Table of Contents
+
+1. [Overview](#overview)
+2. [Prerequisites](#prerequisites)
+3. [Installation](#installation)
+4. [Usage](#usage)
+5. [Customization](#customization)
+6. [Contact](#contact)
+
+## Overview
+
+HumanWaveDetector is a Python application that uses your webcam to detect hand gestures and body poses in real-time. When a person waves their hand at the camera, the application recognizes the gesture and prints a greeting message.
+
+### Key Features
+
+- Real-time hand detection and tracking using MediaPipe Hands
+- Body pose detection using MediaPipe Pose
+- Visual overlays showing detected hand landmarks and body skeleton
+- Automatic wave gesture recognition
+- Optimized frame processing for smooth performance
+
+## Prerequisites
+
 - Python >= 3.7
-- OpenCV
-- Mediapipe
+- Webcam
 
-## Cài đặt
+## Installation
 
-1. Clone repository này:
+### Clone Repository
+
 ```bash
-git clone https://github.com/ihatesea69/HumanWaveDetector
+git clone https://github.com/ihatesea69/HumanWaveDetector.git
 cd HumanWaveDetector
 ```
 
+### Install Dependencies
 
-1. Hoặc có thể cài đặt thông qua `setup.py`:
+```bash
+pip install opencv-python mediapipe
+```
+
+Or install via setup.py:
+
 ```bash
 python setup.py install
 ```
 
-## Sử dụng
+## Usage
 
-Chạy script để khởi động ứng dụng:
+Run the application:
+
 ```bash
 python main.py
 ```
 
-### Điều khiển
-- Nhấn `q` để thoát ứng dụng.
+### Controls
 
-## Tùy chỉnh
+- Press `q` to quit the application
 
-- Sửa đổi logic nhận diện vẫy tay trong code để phù hợp với nhu cầu phát hiện cử chỉ cụ thể của bạn:
+### How It Works
+
+1. The application captures video from your webcam
+2. Each frame is processed to detect hands and body pose
+3. When a waving gesture is detected (thumb and index finger in specific positions), "Xin Chào Bạn" (Hello) is printed
+4. Visual overlays show the detected landmarks on the video feed
+
+## Customization
+
+Modify the wave detection logic in `main.py` to adjust gesture recognition:
+
 ```python
 if landmarks[4].x > landmarks[3].x and landmarks[8].y < landmarks[6].y:
     waving_hand = True
 ```
 
+## Contact
 
-## Giấy phép
-
-Dự án thuoc nhom sinh vien HUFLIT, moi chi tiet xin vui long lien he facebook ben duoi
-
-## Hỗ trợ
-
-Đối với câu hỏi hoặc vấn đề, vui lòng lien he trên [Facebook](https://www.facebook.com/danhhoanghieunghi69/).
+For questions or issues, contact via [Facebook](https://www.facebook.com/danhhoanghieunghi69/).
 
 ---
+
+**HUFLIT Student Project**
